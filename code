@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> vec;
+
+int main()
+{
+    int n, i;
+    
+    cin >> n;
+    vec.resize(n);
+    
+    for(auto& i : vec)
+    {
+        cin >> i;
+    }
+    
+    for(i = 0; i < n; i ++)
+    {
+        if((vec[i] % vec[n - 1]) == 0)
+        {
+            cout << vec[i] << ' ';
+        }
+    }
+    
+    return 0;
+}
